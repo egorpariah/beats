@@ -1,0 +1,14 @@
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone__icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}
+
+.phone__text {
+  font-size: 18px;
+}

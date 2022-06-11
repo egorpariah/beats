@@ -1,0 +1,36 @@
+// variables
+$containerWidth: 940px;
+$baseFontSize: 16px;
+
+// colors
+$body: #666;
+$black: #292929;
+$red: #E01F3D;
+
+// z-indexes
+$zFixedMenu: 100;
+
+// normalize
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+// setups
+@import "base";
+@import "https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap";
+
+// components
+@import "components/header";
+@import "components/menu";
+@import "components/phone";
+@import "components/first-screen";
+@import "components/point";
+@import "components/page-title";
+@import "components/button";
+@import "components/features";
+@import "components/feature";
+@import "components/reviews";
+@import "components/review";
+@import "components/photo-pager";
+@import "components/order";
+@import "components/form";
+@import "components/select";
+@import "components/fixed-menu";

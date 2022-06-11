@@ -1,0 +1,50 @@
+.review {
+  background: #F8FAF9;
+  padding: 42px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -61px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+.review__photo {
+  width: 253px;
+  height: 264px;
+  margin-right: 40px;
+}
+
+.review__content {
+  flex: 1;
+  padding: 33px 0;
+}
+
+.review__title {
+  color: $black;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+
+.review__text {
+  padding-right: 65px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.review__name {
+  color: $black;
+  font-weight: 700;
+  font-size: 18px;
+}

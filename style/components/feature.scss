@@ -1,0 +1,37 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature__pic {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  background: #F2F5F4;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.feature__icon {
+  width: 68px;
+  height: 68px;
+}
+
+.feature__description {
+  text-align: center;
+}
+
+.feature__title {
+  color: $black;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature__subtitle {
+  padding: 0 15px;
+}

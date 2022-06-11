@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 18px 41px;
+  background: $red;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #CA1B36;
+  }
+
+  &--theme--text {
+    padding: 0;
+    background: none;
+    text-transform: none;
+    font-weight: 400;
+
+    &:hover {
+      background: none;
+      color: $red;
+    }
+  }
+}
