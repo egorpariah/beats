@@ -166,7 +166,7 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  background: url("../../img/phones-main.png") right 5% center/50% auto no-repeat;
+  background: url("../img/phones-main.png") right 5% center/50% auto no-repeat;
 }
 .first-screen__container::after {
   content: "";
@@ -329,7 +329,7 @@ table {
   padding-right: 0;
 }
 .features__item::after {
-  content: url("../../img/circles.svg");
+  content: url("../img/circles.svg");
   position: absolute;
   top: 54px;
   right: 0;
@@ -522,7 +522,7 @@ table {
 .order {
   padding-top: 68px;
   padding-bottom: 85px;
-  background: #181818 url("../../img/form-bg.png") center bottom/cover no-repeat;
+  background: #181818 url("../img/form-bg.png") center bottom/cover no-repeat;
 }
 
 .order__title {
@@ -630,7 +630,7 @@ table {
   width: 24px;
   height: 24px;
   background: none;
-  background: url("../../img/icons/checkmark.svg") center center no-repeat;
+  background: url("../img/icons/checkmark.svg") center center no-repeat;
   left: 0px;
 }
 
