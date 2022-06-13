@@ -1,0 +1,71 @@
+.form {
+  display: flex;
+
+  &__col {
+    flex: 1;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__field {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right: 16px;
+    margin-bottom: 11px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--textarea {
+      margin-right: 0;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__label {
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  &__input {
+    font-size: 14px;
+    width: 100%;
+    padding: 18px 12px;
+    height: 58px;
+    background: #fff;
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+      border: 3px solid $red;
+    }
+
+    &--textarea {
+      height: 152px;
+      resize: none;
+    }
+  }
+
+  &__select {
+    color: #fff;
+    margin-bottom: 46px;
+  }
+
+  &__pay {
+    display: flex;
+    margin-bottom: 19px;
+  }
+
+  &__button {
+    margin-right: 15px;
+  }
+}

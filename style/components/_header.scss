@@ -1,0 +1,13 @@
+.header {
+  background: #f5f5f5;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__phone {
+    margin-right: 25px;
+  }
+}
