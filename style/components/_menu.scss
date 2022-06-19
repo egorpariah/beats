@@ -1,13 +1,37 @@
 .menu {
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablet {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__item {
-    margin-right: 26px;
+    margin-right: rem(26px);
+    margin-bottom: 10px;
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  &__link {
+    transition: 0.4s;
+    white-space: nowrap;
+
+    &:hover {
+      color: $red;
     }
   }
 }

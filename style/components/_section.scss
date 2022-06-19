@@ -4,4 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include tablet {
+    min-height: 1000px;
+  }
+
+  @include mobile {
+    height: auto;
+    min-height: 0;
+  }
 }

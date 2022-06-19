@@ -1,9 +1,17 @@
 .form {
   display: flex;
 
+  @include tablet {
+    flex-direction: column;
+  }
+
   &__col {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
+
+    @include tablet {
+      margin: 0;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -18,8 +26,12 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin-right: 16px;
-    margin-bottom: 11px;
+    margin-right: rem(16px);
+    margin-bottom: rem(11px);
+
+    @include tablet {
+      margin-bottom: rem(14px);
+    }
 
     &:last-child {
       margin-right: 0;
@@ -27,22 +39,30 @@
 
     &--textarea {
       margin-right: 0;
-      margin-bottom: 38px;
+      margin-bottom: rem(38px);
+
+      @include tablet {
+        margin-bottom: 22px;
+      }
     }
   }
 
   &__label {
     color: #fff;
-    margin-bottom: 6px;
+    margin-bottom: rem(6px);
   }
 
   &__input {
-    font-size: 14px;
+    font-size: rem(14px);
     width: 100%;
-    padding: 18px 12px;
-    height: 58px;
+    padding: rem(18px) rem(12px);
+    height: rem(58px);
     background: #fff;
     border-radius: 4px;
+
+    @include tablet {
+      height: 36px;
+    }
 
     &:focus {
       outline: none;
@@ -50,22 +70,69 @@
     }
 
     &--textarea {
-      height: 152px;
+      height: rem(152px);
       resize: none;
+
+      @include tablet {
+        height: rem(82px);
+      }
     }
   }
 
   &__select {
     color: #fff;
-    margin-bottom: 46px;
+    margin-bottom: rem(38px);
+
+    @include tablet {
+      margin-bottom: rem(30px);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__pay {
     display: flex;
-    margin-bottom: 19px;
+    flex-wrap: wrap;
+    margin-bottom: rem(11px);
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__call {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__buttons {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__button {
-    margin-right: 15px;
+    margin-right: rem(15px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      margin-right: rem(26px);
+    }
   }
 }

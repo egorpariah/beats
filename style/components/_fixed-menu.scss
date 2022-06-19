@@ -5,11 +5,15 @@
   right: 3%;
   z-index: $zFixedMenu;
 
+  @include tablet {
+    display: none;
+  }
+
   &__item {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
     &--active {
-      &__button {
+      .fixed-menu__button {
         border-color: $red;
 
         &::before {
@@ -21,10 +25,10 @@
 
   &__button {
     background: none;
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     position: relative;
 
     &::before {
@@ -34,8 +38,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: block;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       border-radius: 50%;
       background: #7b7b7b;
     }

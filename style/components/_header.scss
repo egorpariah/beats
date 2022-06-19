@@ -1,13 +1,38 @@
 .header {
-  background: #f5f5f5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__menu {
+    padding: rem(12px) rem(20px) 0;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__phone {
-    margin-right: 25px;
+    padding-top: 11px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include tablet {
+      cursor: pointer;
+      display: flex;
+      width: 40px;
+      height: 40px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    @include mobile {
+      justify-content: flex-end;
+    }
   }
 }

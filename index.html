@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/base/normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="./style/main.css">
   <title>Beats</title>
 </head>
@@ -13,44 +12,48 @@
 <body>
   <div class="wrapper">
     <div class="main-content">
-
-      <section class="first-screen">
+      <section class="first-screen section">
         <div class="first-screen__container container">
           <header class="first-screen__header header">
-            <div class="header__container container">
-              <a href="./" class="header__logo logo">
-                <img src="./img/logo.svg" alt="Логотип Beats" class="logo__pic">
-              </a>
-              <nav class="menu">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">О нас</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Наушники</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Команда</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Цвета</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Отзывы</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Как мы работаем</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <a class="header__phone phone" href="tel:+78009039090">
-                <img class="phone__icon" src="./img/icons/phone.svg" alt="phone icon">
-                <span class="phone__text">8 800 903 90 90</span>
-              </a>
-            </div>
+            <a href="./" class="header__logo logo">
+              <svg class="logo__pic">
+                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Наушники</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Команда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Цвета</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Как мы работаем</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__phone phone" href="tel:+78009039090">
+              <svg class="phone__icon">
+                <use xlink:href="./img/icons/sprite.svg#phone"></use>
+              </svg>
+              <span class="phone__text">8 800 903 90 90</span>
+            </a>
+            <button class="header__burger burger">
+              <div class="burger__icon"></div>
+            </button>
           </header>
           <div class="first-screen__content">
             <h1 class="first-screen__title page-title">Беспроводные наушники Beats Solo 3</h1>
@@ -59,15 +62,21 @@
           </div>
           <ul class="first-screen__points">
             <li class="first-screen__point point">
-              <img class="point__icon" src="./img/icons/noise.svg" alt="sound icon">
+              <svg class="point__icon">
+                <use xlink:href="./img/icons/sprite.svg#noise"></use>
+              </svg>
               <div class="point__text">Безупречный звук</div>
             </li>
             <li class="first-screen__point point">
-              <img class="point__icon" src="./img/icons/charging.svg" alt="battery icon">
+              <svg class="point__icon">
+                <use xlink:href="./img/icons/sprite.svg#charging"></use>
+              </svg>
               <div class="point__text">До 40 часов работы</div>
             </li>
             <li class="first-screen__point point">
-              <img class="point__icon" src="./img/icons/plug.svg" alt="charging icon">
+              <svg class="point__icon">
+                <use xlink:href="./img/icons/sprite.svg#plug"></use>
+              </svg>
               <div class="point__text">Технология Fast Fuel</div>
             </li>
           </ul>
@@ -84,7 +93,9 @@
           <ul class="features__list">
             <li class="features__item feature">
               <div class="feature__pic">
-                <img class="feature__icon" src="./img/icons/battery.svg" alt="Батарейка">
+                <svg class="feature__icon">
+                  <use xlink:href="./img/icons/sprite.svg#battery"></use>
+                </svg>
               </div>
               <div class="feature__description">
                 <h3 class="feature__title">40 часов работы</h3>
@@ -96,7 +107,9 @@
             </li>
             <li class="features__item feature">
               <div class="feature__pic">
-                <img class="feature__icon" src="./img/icons/sound.svg" alt="Динамик">
+                <svg class="feature__icon">
+                  <use xlink:href="./img/icons/sprite.svg#sound"></use>
+                </svg>
               </div>
               <div class="feature__description">
                 <h3 class="feature__title">Фирменное звучание</h3>
@@ -109,7 +122,9 @@
             </li>
             <li class="features__item feature">
               <div class="feature__pic">
-                <img class="feature__icon" src="./img/icons/time.svg" alt="Секундомер">
+                <svg class="feature__icon">
+                  <use xlink:href="./img/icons/sprite.svg#time"></use>
+                </svg>
               </div>
               <div class="feature__description">
                 <h3 class="feature__title">Быстрая зарядка</h3>
@@ -164,7 +179,7 @@
       </section>
 
       <section class="section order">
-        <div class="container">
+        <div class="order__container container">
           <h2 class="order__title page-title page-title--white">Закажите доставку</h2>
           <form class="order__form form" method="post">
             <div class="form__col">
@@ -212,18 +227,27 @@
                 <div class="form__pay">
                   <div class="form__radio select">
                     <input class="select__input" type="radio" name="pay" id="pay">
-                    <label class="select__label" for="pay">Потребуется сдача</label>
+                    <label class="select__label" for="pay">
+                      <span class="select__text">Потребуется сдача</span>
+                    </label>
                   </div>
 
                   <div class="form__radio select">
                     <input class="select__input" type="radio" name="pay" id="card" checked>
-                    <label class="select__label" for="card">Оплата картой</label>
+                    <label class="select__label" for="card">
+                      <span class="select__text">Оплата картой</span>
+                    </label>
                   </div>
                 </div>
                 <div class="form__call">
                   <div class="form__check select">
                     <input class="select__input" type="checkbox" name="call" id="call">
-                    <label class="select__label select__label--check" for="call">Не перезванивать</label>
+                    <label class="select__label select__label--check" for="call">
+                      <svg class="select__icon select__icon--check">
+                        <use xlink:href="./img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span class="select__text">Не перезванивать</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -236,8 +260,55 @@
         </div>
       </section>
 
+      <secion class="section contacts">
+        <div class="contacts__map map"></div>
+        <footer class="contacts__footer footer">
+          <div class="footer__container container">
+            <address class="footer__contacts">
+              <div class="footer__address">Москва, ул. Новый Арбат, д. 31/12</div>
+              <a class="footer__phone phone" href="tel:+78009039090">
+                <svg class="phone__icon">
+                  <use xlink:href="./img/icons/sprite.svg#phone"></use>
+                </svg>
+                <span class="phone__text">8 800 903 90 90</span>
+              </a>
+            </address>
+            <ul class="footer__social social">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="./img/icons/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="./img/icons/sprite.svg#in"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="./img/icons/sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </secion>
     </div>
   </div>
+
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--active">

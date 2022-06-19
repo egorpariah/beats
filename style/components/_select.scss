@@ -1,4 +1,14 @@
 .select {
+  margin-right: rem(24px);
+
+  @include mobile {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   &__input {
     display: none;
 
@@ -14,12 +24,14 @@
         background: $red;
       }
 
-      &--check::after {
-        width: 24px;
-        height: 24px;
-        background: none;
-        background: url("../img/icons/checkmark.svg") center center no-repeat;
-        left: 0px;
+      &--check {
+        &::after {
+          display: none;
+        }
+
+        .select__icon {
+          display: block;
+        }
       }
     }
   }
@@ -27,7 +39,7 @@
   &__label {
     cursor: pointer;
     user-select: none;
-    margin-right: 15px;
+    margin-bottom: rem(8px);
     display: flex;
     align-items: center;
     position: relative;
@@ -48,5 +60,13 @@
       border-radius: 4px;
       background: #fff;
     }
+  }
+
+  &__icon {
+    display: none;
+    position: absolute;
+    left: 7px;
+    width: 10px;
+    height: 8px;
   }
 }

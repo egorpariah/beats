@@ -3,12 +3,18 @@
   align-items: center;
 
   &__icon {
+    fill: #292929;
     width: 14px;
     height: 14px;
     margin-right: 6px;
   }
   
   &__text {
-    font-size: 18px;
+    white-space: nowrap;
+    font-size: rem(18px);
+
+    @include mobile {
+      font-size: rem(16px);
+    }
   }
 }

@@ -1,50 +1,104 @@
 .review {
   background: #F8FAF9;
-  padding: 42px;
+  padding: rem(42px);
   display: flex;
   position: relative;
   overflow: hidden;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding: rem(56px) rem(24px) rem(50px);
+  }
+
+  @include mobile {
+    padding-bottom: rem(40px);
+  }
 
   &::before {
     content: "";
     display: block;
     position: absolute;
-    top: -61px;
+    top: rem(-61px);
     left: 50%;
     transform: translateX(-50%);
-    width: 83px;
-    height: 83px;
+    width: rem(83px);
+    height: rem(83px);
     border-radius: 50%;
     background: #fff;
+
+    @include tablet {
+      top: rem(-48px);
+    }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__photo {
-    width: 253px;
-    height: 264px;
-    margin-right: 40px;
+    width: rem(253px);
+    height: rem(264px);
+    margin-right: rem(40px);
+
+    @include tablet {
+      width: rem(130px);
+      height: rem(130px);
+      margin-bottom: rem(32px);
+      margin-right: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 22px;
+    }
   }
 
   &__content {
     flex: 1;
-    padding: 33px 0;
+    padding: rem(33px) 0;
+
+    @include tablet {
+      text-align: center;
+      padding: 0;
+    }
   }
 
   &__title {
     color: $black;
     font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 27px;
+    font-size: rem(24px);
+    margin-bottom: rem(27px);
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    @include mobile {
+      margin-bottom: rem(12px);
+    }
   }
 
   &__text {
-    padding-right: 65px;
-    margin-bottom: 16px;
+    padding-right: rem(65px);
+    margin-bottom: rem(16px);
     line-height: 1.2;
+
+    @include tablet {
+      padding-right: 0;
+    }
+
+    @include mobile {
+      margin-bottom: rem(12px);
+    }
   }
 
   &__name {
     color: $black;
     font-weight: 700;
-    font-size: 18px;
+    font-size: rem(18px);
+
+    @include tablet {
+      font-weight: 400;
+    }
   }
 }

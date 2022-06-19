@@ -4,12 +4,13 @@
 
   &__icon {
     display: block;
-    width: 41px;
-    margin-right: 10px;
+    width: rem(41px);
+    height: rem(41px);
+    margin-right: rem(10px);
   }
   
   &__text {
-    max-width: 115px;
+    max-width: rem(115px);
     color: $black;
   }
 }
