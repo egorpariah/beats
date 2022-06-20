@@ -8,7 +8,7 @@
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../img/phones-main.png") right 5% center / 50% auto no-repeat;
+    background: url("../img/phones-main.png") right 8% bottom 30% / 50% auto no-repeat;
 
     @include tablet {
       background: none;

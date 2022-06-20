@@ -166,24 +166,41 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .phone__icon {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   fill: #292929;
   width: 14px;
   height: 14px;
   margin-right: 6px;
 }
+@media screen and (max-width: 768px) {
+  .phone__icon {
+    fill: #E01F3D;
+  }
+}
+.phone:hover {
+  color: #E01F3D;
+}
+.phone:hover .phone__icon {
+  fill: #E01F3D;
+}
 .phone__text {
   white-space: nowrap;
   font-size: 1.125rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .phone__text {
+    color: #E01F3D;
     font-size: 1rem;
   }
 }
 
 .header {
+  color: #292929;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +346,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("../img/phones-main.png") right 5% center/50% auto no-repeat;
+  background: url("../img/phones-main.png") right 8% bottom 30%/50% auto no-repeat;
 }
 @media screen and (max-width: 768px) {
   .first-screen__container {
@@ -1248,6 +1265,7 @@ table {
 
 .footer {
   background: #fff;
+  color: #292929;
   font-size: 1.125rem;
   padding: 1.25rem 0;
 }
