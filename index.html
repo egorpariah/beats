@@ -21,6 +21,7 @@
               </svg>
             </a>
             <nav class="header__menu menu">
+              <div class="menu__close"></div>
               <ul class="menu__list">
                 <li class="menu__item">
                   <a href="#" class="menu__link">О нас</a>
@@ -135,6 +136,102 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section slider">
+        <div class="slider__container container">
+          <button class="slider__control">
+            <svg class="slider__arrow">
+              <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+          <ul class="slider__list">
+            <li class="slider__item slide">
+              <img class="slide__pic" src="./img/beats-silver.png" alt="Beats Атласное Серебро">
+              <div class="slide__content">
+                <div class="slide__params">
+                  <button class="slide__open">
+                    <svg class="slide__icon">
+                      <use xlink:href="./img/icons/sprite.svg#gear"></use>
+                    </svg>
+                    <table class="slide__table spec">
+                      <tr class="spec__row">
+                        <td class="spec__pic">
+                          <svg class="spec__icon">
+                            <use xlink:href="./img/icons/sprite.svg#bluetooth"></use>
+                          </svg>
+                        </td>
+                        <td class="spec__name">Bluetooth</td>
+                        <td class="spec__value">4.0</td>
+                      </tr>
+                      <tr class="spec__row">
+                        <td class="spec__pic">
+                          <svg class="spec__icon">
+                            <use xlink:href="./img/icons/sprite.svg#distance"></use>
+                          </svg>
+                        </td>
+                        <td class="spec__name">Дальность</td>
+                        <td class="spec__value">12 м</td>
+                      </tr>
+                      <tr class="spec__row">
+                        <td class="spec__pic">
+                          <svg class="spec__icon">
+                            <use xlink:href="./img/icons/sprite.svg#mobile-charger"></use>
+                          </svg>
+                        </td>
+                        <td class="spec__name">Зарядка</td>
+                        <td class="spec__value">3 ч</td>
+                      </tr>
+                      <tr class="spec__row">
+                        <td class="spec__pic">
+                          <svg class="spec__icon">
+                            <use xlink:href="./img/icons/sprite.svg#weight"></use>
+                          </svg>
+                        </td>
+                        <td class="spec__name">Вес</td>
+                        <td class="spec__value">215 гр</td>
+                      </tr>
+                      <tr class="spec__row">
+                        <td class="spec__pic">
+                          <svg class="spec__icon">
+                            <use xlink:href="./img/icons/sprite.svg#warranty"></use>
+                          </svg>
+                        </td>
+                        <td class="spec__name">Гарантия</td>
+                        <td class="spec__value">1 год</td>
+                      </tr>
+                    </table>
+                  </button>
+                  
+                </div>
+                <h3 class="slide__title">Beats Solo 3. Цвет «Атласное Серебро»</h3>
+                <div class="slide__main">
+                  <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему
+                    iPhone — они мгновенно подключатся к нему.</p>
+                  <ul class="slide__features">
+                    <li class="slide__feature">
+                      <div class="slide__feature-title">Зарядка</div>
+                      <div class="slide__feature-text">2 часа</div>
+                    </li>
+                    <li class="slide__feature">
+                      <div class="slide__feature-title">Вес</div>
+                      <div class="slide__feature-text">215 грамм</div>
+                    </li>
+                  </ul>
+                  <div class="slide__cta">
+                    <div class="slide__price">14 990 ₽</div>
+                    <button class="slide_button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="slider__control slider__control--right">
+            <svg class="slider__arrow slider__arrow--right">
+              <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -340,6 +437,31 @@
       </li>
     </ul>
   </nav>
+
+  <script type="text/javascript">
+    const burger = document.querySelector('.burger');
+    const close = document.querySelector('.menu__close');
+    const menu = document.querySelector('.menu');
+
+    burger.addEventListener('click', function () {
+      menu.style.display = 'block';
+    });
+
+    close.addEventListener('click', function () {
+      menu.removeAttribute('style');
+    });
+
+    const gear = document.querySelector('.slide__open')
+    const table = document.querySelector('.slide__table')
+
+    gear.addEventListener('mouseover', function() {
+      table.classList.add('slide__table--display');
+    });
+
+    gear.addEventListener('mouseout', function() {
+      table.classList.remove('slide__table--display');
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,96 @@
+.slider {
+  background: #F8FAF9;
+  height: auto;
+  min-height: 100vh;
+
+  @include tablet {
+    min-height: 816px;
+  }
+
+  @include mobile {
+  }
+
+  &__container {
+    flex-grow: 1;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    position: relative;
+
+    @include tablet {
+      justify-content: flex-start;
+      min-height: 816px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    @include mobile {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    &::after {
+      content: '';
+      background: $black;
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: -1%;
+      bottom: rem(-12px);
+      transform: rotate(30deg);
+
+      @include tablet {
+        right: 8%;
+      }
+    }
+  }
+
+  &__control {
+    height: 29px;
+    position: absolute;
+    left: 1%;
+
+    @include tablet {
+      left: 18%;
+      top: 232px;
+    }
+
+    @include mobile {
+      top: 196px;
+      left: 10px;
+    }
+
+    &--right {
+      left: auto;
+      right: 1%;
+
+      @include tablet {
+        right: 18%;
+      }
+
+      @include mobile {
+        right: 10px;
+      }
+    }
+  }
+
+  &__arrow {
+    transition: stroke 0.3s;
+    stroke: black;
+    width: 15px;
+    height: 29px;
+
+    &:hover {
+      stroke: $red;
+    }
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+  }
+}
