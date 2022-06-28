@@ -45,6 +45,11 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  @include tablet {
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
+  }
+
   @include mobile {
     max-width: $tabletWidth - 1px;
     padding: 0 10px;

@@ -7,8 +7,8 @@
 
     @include tablet {
       align-items: center;
-      padding-top: rem(60px);
-      padding-bottom: rem(60px);
+      padding-top: rem(100px);
+      padding-bottom: rem(100px);
     }
 
     @include mobile {

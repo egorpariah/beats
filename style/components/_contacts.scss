@@ -1,12 +1,9 @@
 .contacts {
   position: relative;
+  height: 600px;
 
   &__map {
     height: 100%;
-
-    @include mobile {
-      min-height: 630px;
-    }
   }
 
   &__footer {

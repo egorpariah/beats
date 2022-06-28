@@ -1,15 +1,12 @@
 .reviews {
-  @include mobile {
-    min-height: rem(800px);
-  }
 
   &__container {
     padding-top: rem(64px);
     padding-bottom: rem(63px);
 
-    @include mobile {
-      padding-top: rem(80px);
-      flex-grow: 1;
+    @include tablet {
+      padding-top: rem(100px);
+      padding-bottom: rem(100px);
     }
 
     &::after {
@@ -26,7 +23,7 @@
       @include tablet {
         left: 8%;
       }
-   
+
     }
   }
 

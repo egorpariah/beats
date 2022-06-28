@@ -12,7 +12,7 @@
 
     @include tablet {
       background: none;
-      padding-bottom: 0;
+      padding-bottom: rem(100px);
     }
 
     @include mobile {
@@ -45,7 +45,6 @@
 
     @include tablet {
       padding-top: rem(30px);
-      padding-bottom: rem(100px);
       align-self: center;
       flex: 1;
       display: flex;
