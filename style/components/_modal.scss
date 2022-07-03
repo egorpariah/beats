@@ -1,0 +1,33 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: $zFixedMenu + 1;
+
+  &__window {
+    width: rem(310px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #fff;
+  }
+
+  &__text {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 18px;
+
+    &--error {
+      color: $red;
+    }
+  }
+}

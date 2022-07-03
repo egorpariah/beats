@@ -20,6 +20,33 @@
       margin-right: 0;
     }
 
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        width: rem(74px);
+        height: rem(74px);
+        box-shadow: 0 0 0 rem(4px) inset $red;
+
+        @include mobile {
+          width: rem(64px);
+          height: rem(64px);
+        }
+      }
+    }
+
+    &--active:hover {
+      cursor: default;
+
+      &::after {
+        box-shadow: 0 0 0 rem(6px) inset $red;
+      }
+    }
+
     &--active::after {
       content: "";
       display: block;
@@ -27,7 +54,7 @@
       position: absolute;
       width: rem(74px);
       height: rem(74px);
-      box-shadow: 0 0 0 rem(4px) inset $red;
+      box-shadow: 0 0 0 rem(6px) inset $red;
 
       @include mobile {
         width: rem(64px);

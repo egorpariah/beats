@@ -39,6 +39,14 @@
     }
   }
 
+  &__item {
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+
   &__title {
     text-align: center;
     margin-bottom: rem(31px);

@@ -24,6 +24,9 @@ $zFixedMenu: 100;
 @import "base";
 @import "https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap";
 
+//libraries
+@import "slick";
+
 // components
 @import "components/section";
 @import "components/logo";
@@ -40,12 +43,15 @@ $zFixedMenu: 100;
 @import "components/slider";
 @import "components/slide";
 @import "components/spec";
-@import "components/reviews";
+@import "components/crew";
+@import "components/person";
 @import "components/review";
+@import "components/reviews";
 @import "components/photo-pager";
 @import "components/order";
 @import "components/form";
 @import "components/select";
+@import "components/modal";
 @import "components/contacts";
 @import "components/footer";
 @import "components/map";

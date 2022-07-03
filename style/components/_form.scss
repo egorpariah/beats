@@ -60,6 +60,10 @@
     background: #fff;
     border-radius: 4px;
 
+    &--error {
+      border: 3px dashed $red;
+    }
+
     @include tablet {
       height: 36px;
     }

@@ -50,6 +50,12 @@
     height: 90px;
     background: #9A9A9A;
 
+    &:hover {
+      .slide__table {
+        display: block;
+      }
+    }
+
     @include tablet {
       display: none;
     }
@@ -66,10 +72,6 @@
     position: absolute;
     top: 0;
     left: 90px;
-
-    &--display {
-      display: block;
-    }
   }
 
   &__title {
