@@ -33,7 +33,7 @@ task('copy:html', () => {
 
 task('copy:images', () => {
   return src([`${SRC_PATH}/images/*`, `!${SRC_PATH}/images/icons/*.svg`])
-    // .pipe(imagemin())
+    .pipe(gulpif(env === 'prod', imagemin()))
     .pipe(dest(`${DIST_PATH}/images`))
 })
 
@@ -135,7 +135,6 @@ task('default',
 task('build',
   series(
     'clean',
-    parallel('copy:html', 'copy:images', 'icons', 'copy:videos', 'styles', 'scripts'),
-    'deploy'
+    parallel('copy:html', 'copy:images', 'icons', 'copy:videos', 'styles', 'scripts')
   )
 );
