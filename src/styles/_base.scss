@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: $baseFontSize;
+
+  @include tablet {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include mobile {
+    font-size: $baseFontSize - 2px;
+  }
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  font-family: "Play", sans-serif;
+  line-height: 1.15;
+  color: $body;
+  background: #fff;
+  -webkit-font-smoothig: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 rem(20px);
+  width: 100%;
+  max-width: $containerWidth + 40px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    flex-grow: 1;
+    padding-top: rem(100px);
+    padding-bottom: rem(100px);
+  }
+
+  @include mobile {
+    max-width: $tabletWidth - 1px;
+    padding: 0 10px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  line-height: 1.15;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+input {
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}

@@ -1,0 +1,16 @@
+.point {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    display: block;
+    width: rem(41px);
+    height: rem(41px);
+    margin-right: rem(10px);
+  }
+  
+  &__text {
+    max-width: rem(115px);
+    color: $black;
+  }
+}

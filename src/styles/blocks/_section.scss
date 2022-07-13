@@ -1,0 +1,12 @@
+.section {
+  height: 100%;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    height: auto;
+    min-height: 100vh;
+  }
+}

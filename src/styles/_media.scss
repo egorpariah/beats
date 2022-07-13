@@ -1,0 +1,17 @@
+//functions
+@function rem($px) {
+  @return calc($px / $baseFontSize) * 1rem;
+}
+
+// mixins
+@mixin tablet {
+  @media screen and (max-width: $tabletWidth) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobileWidth) {
+    @content;
+  }
+}

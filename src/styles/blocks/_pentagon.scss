@@ -1,0 +1,18 @@
+.pentagon {
+  width: 30px;
+  box-sizing: content-box;
+  border-width: 28px 9px 0;
+  border-style: solid;
+  border-color: $red transparent;
+}
+.pentagon::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -46px;
+  left: -9px;
+  border-width: 0 24px 18px;
+  border-style: solid;
+  border-color: transparent transparent $red;
+}

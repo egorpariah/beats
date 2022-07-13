@@ -1,0 +1,27 @@
+// variables
+$containerWidth: 940px;
+$baseFontSize: 16px;
+
+//breakpoins
+$tabletWidth: 768px;
+$mobileWidth: 480px;
+
+// colors
+$body: #666;
+$black: #292929;
+$red: #E01F3D;
+
+// z-indexes
+$zFixedMenu: 100;
+
+//media
+@import 'media';
+
+// setups
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+@import 'base';
+
+
+// blocks
+@import 'blocks/*.scss';

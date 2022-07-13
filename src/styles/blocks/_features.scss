@@ -1,0 +1,108 @@
+.features {
+  &__container {
+    padding-top: rem(110px);
+    padding-bottom: rem(100px);
+
+    @include mobile {
+      padding-top: rem(24px);
+      padding-bottom: rem(24px);
+      justify-content: center;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      border-right: rem(16px) solid transparent;
+      border-left: rem(16px) solid transparent;
+      border-top: rem(32px) solid transparent;
+      border-bottom: rem(32px) solid $red;
+      position: absolute;
+      left: -2%;
+      bottom: rem(-46px);
+      transform: rotate(-135deg);
+
+      @include tablet {
+        left: 4%;
+      }
+    }
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: rem(60px);
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(18px);
+
+    @include tablet {
+      margin-bottom: rem(11px);
+    }
+  }
+
+  &__subtitle {
+    padding: 0 20%;
+
+    @include tablet {
+      padding: 0 14%;
+    }
+
+    @include tablet {
+      padding: 0 5%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 1;
+    padding: 0 3%;
+
+    @include mobile {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    &:nth-child(4n + 1) {
+      padding-left: 0;
+    }
+
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+
+    &::after {
+      content: url("./images/circles.svg");
+      position: absolute;
+      top: rem(54px);
+      right: 0;
+      transform: translateX(50%);
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:nth-child(3n),
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

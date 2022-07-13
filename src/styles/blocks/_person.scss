@@ -1,0 +1,96 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  @include mobile {
+    width: 300px;
+  }
+
+  &__photo {
+    margin-bottom: rem(25px);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__header {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 11px;
+
+    @include tablet {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__triangle {
+    display: inline-block;
+    margin-left: 4px;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-top: 7px solid $red;
+  }
+
+  &__wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    position: absolute;
+    top: 100%;
+
+    @include tablet {
+      position: static;
+      top: auto;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__desc-photo {
+    display: none;
+
+    @include tablet {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      width: 138px;
+    }
+  }
+
+  &__occupation {
+    color: $black;
+    margin-bottom: 4px;
+
+    @include tablet {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__about {
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.horiz-accord {
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    height: 100%;
+    position: relative;
+
+    &--active {
+      @include mobile {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__button {
+    width: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 35px 30px;
+    color: inherit;
+    font-weight: 700;
+    font-size: rem(36px);
+
+    @include mobile {
+      width: 90px;
+    }
+
+    &--silver {
+      background: #999;
+    }
+
+    &--black {
+      background: #151515;
+    }
+
+    &--red {
+      background: $red;
+    }
+  }
+
+  &__button-text {
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    white-space: nowrap;
+  }
+
+  &__wrapper {
+    height: 100%;
+    transition: width 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+    overflow: hidden;
+    width: 0;
+    background: rgba(51, 53, 55, 0.9);
+    z-index: 0;
+
+    @include mobile {
+      transition: none;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    backdrop-filter: blur(10px);
+    padding: rem(40px);
+  }
+}

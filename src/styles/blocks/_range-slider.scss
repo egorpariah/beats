@@ -1,0 +1,42 @@
+.range-slider {
+  cursor: pointer;
+  position: relative;
+  height: rem(4px);
+  background: #333;
+
+  &--volume {
+    height: rem(6px);
+
+    .range-slider__button {
+      background: #fff;
+      top: rem(-3px);
+      left: 100%;
+    }
+
+    .range-slider__progress {
+      background: #fff;
+      width: 100%;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $red;
+  }
+
+  &__button {
+    transition: left 0.1s;
+    position: absolute;
+    top: -100%;
+    width: rem(12px);
+    height: rem(12px);
+    border-radius: 50%;
+    background: $red;
+    transform: translateX(-50%);
+  }
+}

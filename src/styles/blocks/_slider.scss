@@ -1,0 +1,98 @@
+.slider {
+  background: #F8FAF9;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &__container {
+    flex-grow: 1;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    position: relative;
+
+    @include tablet {
+      padding-top: rem(100px);
+      padding-bottom: rem(100px);
+    }
+
+    @include mobile {
+      padding-top: rem(24px);
+      padding-bottom: rem(24px);
+    }
+
+    &::after {
+      content: '';
+      background: $black;
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: -1%;
+      bottom: rem(-12px);
+      transform: rotate(30deg);
+
+      @include tablet {
+        right: 8%;
+      }
+    }
+  }
+
+  &__control {
+    z-index: 10;
+    height: 29px;
+    position: absolute;
+    left: 1%;
+
+    @include tablet {
+      left: 18%;
+      top: 34%;
+    }
+
+    @include mobile {
+      top: 196px;
+      left: 10px;
+    }
+
+    &--right {
+      left: auto;
+      right: 1%;
+
+      @include tablet {
+        left: auto;
+        right: 18%;
+      }
+
+      @include mobile {
+        left: auto;
+        right: 10px;
+      }
+    }
+  }
+
+  &__arrow {
+    transition: stroke 0.3s;
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    width: 15px;
+    height: 29px;
+
+    &:hover {
+      stroke: $red;
+    }
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    user-select: text;
+    flex-grow: 1;
+    display: flex;
+  }
+}
