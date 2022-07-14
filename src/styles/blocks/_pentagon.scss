@@ -4,6 +4,7 @@
   border-width: 28px 9px 0;
   border-style: solid;
   border-color: $red transparent;
+  z-index: 1;
 }
 .pentagon::before {
   content: "";
