@@ -6,17 +6,24 @@
   &__icon {
     transition: 0.4s;
     fill: $black;
-    width: 14px;
-    height: 14px;
-    margin-right: 6px;
+    width: rem(14px);
+    height: rem(14px);
+    margin-right: rem(6px);
 
     @include tablet {
       fill: $red;
     }
+
+    @include mobile {
+      fill: $black;
+    }
   }
 
   &:hover {
-    color: $red;
+    
+    .phone__text {
+      color: $red;
+    }
 
     .phone__icon {
       fill: $red;
@@ -31,6 +38,10 @@
     @include tablet {
       color: $red;
       font-size: rem(16px);
+    }
+
+    @include mobile {
+      color: $black;
     }
   }
 }
