@@ -1,7 +1,7 @@
 .first-screen {
   background-color: #f5f5f5;
 
-  &__container {
+  &__container.container {
     padding-top: rem(24px);
     padding-bottom: rem(64px);
     display: flex;

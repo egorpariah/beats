@@ -25,9 +25,8 @@
     padding-bottom: rem(115px);
 
     @include mobile {
-      min-height: 100vh;
-      padding-top: rem(48px);
-      padding-bottom: rem(48px);
+      padding-top: rem(70px);
+      padding-bottom: rem(70px);
     }
   }
 
