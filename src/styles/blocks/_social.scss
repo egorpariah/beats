@@ -27,13 +27,8 @@
     }
 
     @include tablet {
-      width: 32px;
-      height: 32px;
-    }
-
-    @include mobile {
-      width: 24px;
-      height: 24px;
+      width: rem(32px);
+      height: rem(32px);
     }
   }
 

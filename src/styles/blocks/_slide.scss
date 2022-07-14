@@ -16,7 +16,7 @@
     margin-right: 6%;
     
     @include tablet {
-      width: 306px;
+      width: rem(340px);
       margin: 0;
       margin-bottom: 52px;
     }
@@ -82,13 +82,13 @@
 
   &__title {
     color: $black;
-    font-size: 36px;
+    font-size: rem(36px);
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 24px;
 
     @include tablet {
-      font-size: 28px;
+      font-size: rem(28px);
       text-align: center;
       margin-bottom: 16px;
     }
@@ -163,12 +163,11 @@
     padding: 6px 0;
 
     @include tablet {
-      font-size: 40px;
+      font-size: rem(40px);
       margin-right: 36px;
     }
 
     @include mobile {
-      font-size: 32px;
       margin-right: 20px;
     }
   }

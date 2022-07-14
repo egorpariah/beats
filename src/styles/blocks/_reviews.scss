@@ -2,7 +2,7 @@
 
   &__container {
     padding-top: rem(64px);
-    padding-bottom: rem(63px);
+    padding-bottom: rem(64px);
 
     @include tablet {
       padding-top: rem(100px);
@@ -34,6 +34,7 @@
 
     @include tablet {
       margin-bottom: rem(32px);
+      min-height: auto;
     }
 
     @include mobile {

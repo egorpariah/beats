@@ -8,8 +8,4 @@
   &--white {
     color: #fff;
   }
-
-  @include mobile {
-    font-size: rem(32px);
-  }
 }

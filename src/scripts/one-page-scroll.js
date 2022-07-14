@@ -10,68 +10,17 @@ let isScroll = false;
   const mobileDetect = new MobileDetect(window.navigator.userAgent);
   const isMobile = mobileDetect.mobile();
 
-  let isEnd = false;
-
   sections.first().addClass('active');
 
-  const translatePosition = (sectionNdx, direction) => {
-    const activeSection = sections.filter('.active');
-    const prevSection = activeSection.prev();
-
-    const activeSectionHeight = activeSection.height();
-    const prevSectionHeight = prevSection.height();
-
-    const windowHeight = $(window).height();
-
-    let position = 0;
-    let currentTransform = 0;
-
-    if (mainContent.css('transform') != 'none') {
-      currentTransform = parseFloat(mainContent.css('transform').split(',')[5]);
-    }
-
-    if (direction == 'down') {
-      if (activeSectionHeight > windowHeight && isEnd == false) {
-        position = currentTransform + windowHeight - activeSectionHeight;
-        isEnd = true;
-      } else {
-        position = currentTransform - windowHeight;
-        isEnd = false;
-      }
-    }
-
-    if (direction == 'up') {
-      if (isEnd == true) {
-        position = currentTransform + activeSectionHeight - windowHeight;
-        isEnd = false;
-      } else {
-        position = currentTransform + windowHeight;
-
-        if (prevSectionHeight > windowHeight) {
-          isEnd = true;
-        } else {
-          isEnd = false;
-        }
-      }
-    }
-
-    if (direction == 'link') {
-      sections.slice(0, sectionNdx).each(function () {
-        position -= $(this).outerHeight();
-      });
-
-      isEnd = false;
-    }
+  const translatePosition = (sectionNdx) => {
+    const position = sectionNdx * -100;
 
     if (isNaN(position)) {
       console.error('Передано неверное значение в translatePosition');
       return 0;
     }
 
-    return {
-      position: position,
-      isEnd: isEnd
-    };
+    return position;
   };
 
   const changeMenuTheme = sectionNdx => {
@@ -90,40 +39,19 @@ let isScroll = false;
     items.eq(itemNdx).addClass(activeClass).siblings().removeClass(activeClass);
   };
 
-  function translateFunc(sectionNdx, direction) {
+  function translateFunc(sectionNdx) {
     if (isScroll) return;
 
     isScroll = true;
 
-    const shift = translatePosition(sectionNdx, direction);
+    const position = translatePosition(sectionNdx);
 
     changeMenuTheme(sectionNdx);
 
-    mainContent.css({ transform: `translateY(${shift.position}px)` })
+    mainContent.css({ transform: `translateY(${position}%)` })
 
-    if (direction == 'down') {
-      if (shift.isEnd == false) {
-        resetActiveClass(sections, sectionNdx, 'active');
-        resetActiveClass(fixedMenuItems, sectionNdx, 'fixed-menu__item--active');
-      }
-    }
-
-    if (direction == 'up') {
-      if (shift.isEnd == true) {
-        resetActiveClass(sections, sectionNdx, 'active');
-        resetActiveClass(fixedMenuItems, sectionNdx, 'fixed-menu__item--active');
-      } else if ((shift.isEnd == false) && (sections.eq(sectionNdx).height() <= $(window).height())) {
-        resetActiveClass(sections, sectionNdx, 'active');
-        resetActiveClass(fixedMenuItems, sectionNdx, 'fixed-menu__item--active');
-      }
-    }
-
-    if (direction == 'link') {
-      mainContent.css({ transform: `translateY(${shift.position}px)` });
-
-      resetActiveClass(sections, sectionNdx, 'active');
-      resetActiveClass(fixedMenuItems, sectionNdx, 'fixed-menu__item--active');
-    }
+    resetActiveClass(sections, sectionNdx, 'active');
+    resetActiveClass(fixedMenuItems, sectionNdx, 'fixed-menu__item--active');
 
     mainContent.on('transitionend', (e) => {
       if (e.target !== mainContent[0]) return;
@@ -141,19 +69,15 @@ let isScroll = false;
     return {
       next() {
         if (nextSection.length) {
-          translateFunc(nextSection.index(), 'down');
+          translateFunc(nextSection.index());
         }
       },
       prev() {
-        if ((prevSection.length) || (isEnd == true)) {
-          if (isEnd == true) {
-            translateFunc(activeSection.index(), 'up');
-          } else {
-            translateFunc(prevSection.index(), 'up');
-          }
+        if (prevSection.length) {
+          translateFunc(prevSection.index());
         }
       }
-    }
+    };
   };
 
   $(window).on('wheel', (e) => {
@@ -187,8 +111,6 @@ let isScroll = false;
     };
   });
 
-  $('.wrapper').on('touchmove', e => e.preventDefault());
-
   $('[data-target]').on('click', e => {
     e.preventDefault();
 
@@ -201,20 +123,23 @@ let isScroll = false;
     const target = $this.attr('data-target');
     const reqSection = $(`[data-section-id=${target}]`)
 
-    translateFunc(reqSection.index(), 'link');
+    translateFunc(reqSection.index());
   });
+
+  $('.wrapper').on('touchmove', e => e.preventDefault());
 
   if (isMobile) {
     // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
     $('body').swipe({
       swipe: function (event, direction) {
+        if (direction == 'left' || direction == 'right') return;
+
         const scroller = sectionScroller();
+
         let scrollDirection = '';
 
         if (direction == 'up') scrollDirection = 'next';
         if (direction == 'down') scrollDirection = 'prev';
-
-        if (direction == 'left' || direction == 'right') return;
 
         scroller[scrollDirection]();
       },

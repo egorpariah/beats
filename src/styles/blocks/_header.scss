@@ -16,7 +16,9 @@
     padding-top: 11px;
 
     @include tablet {
-      display: none;
+      &.phone {
+        display: none;
+      }
     }
   }
 

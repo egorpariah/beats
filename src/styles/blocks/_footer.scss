@@ -40,12 +40,11 @@
     margin-bottom: rem(7px);
 
     @include tablet {
-      font-size: 21px;
+      font-size: rem(21px);
     }
 
     @include mobile {
       margin-bottom: 10px;
-      font-size: 18px;
     }
   }
 }

@@ -5,10 +5,13 @@
   
   burger.addEventListener('click', function () {
     isScroll = true;
+
     menu.style.display = 'block';
   });
   
   close.addEventListener('click', function () {
+    isScroll = false;
+
     menu.removeAttribute('style');
   });
 })();
