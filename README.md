@@ -1,8 +1,8 @@
-# Landing Page — Беспроводные наушники Beats Solo 3
+# Landing Page «Beats»
 
 Задача: Сверстать лендинг с one-page-scroll навигацией и адаптивностью под планшеты и смартфоны.
 
-Деплой проекта на GitHub Pages — [Beats](https://egorpariah.github.io/beats/)
+Деплой проекта на GitHub Pages — [Беспроводные наушники Beats Solo 3](https://egorpariah.github.io/beats/)
 
 ## Выполнил:
 - one-page-scroll (работает и в мобильных версиях)
